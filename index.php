@@ -18,7 +18,7 @@
                     }
                     $offset = ($page -1) * $limit;
                     // datebase to table connection start
-                $sql = "SELECT  post.post_id, post.title, post.description,post.post_date,
+                $sql = "SELECT  post.post_id, post.title, post.description,post.post_date,post.author,
                 category.category_name,user.username,post.category, post.post_img FROM post 
                 LEFT JOIN category ON post.category = category.category_id
                 LEFT JOIN user ON post.author = user.user_id
@@ -41,11 +41,11 @@
                                         <div class="post-information">
                                             <span>
                                                 <i class="fa fa-tags" aria-hidden="true"></i>
-                                                <a href='category.php'><?php echo $row['category_name'];?></a>
+                                                <a href='category.php?cid= <?php echo $row['category'];?>'><?php echo $row['category_name'];?></a>
                                             </span>
                                             <span>
                                                 <i class="fa fa-user" aria-hidden="true"></i>
-                                                <a href='author.php'><?php echo $row['username'];?></a>
+                                                <a href='author.php?aid=<?php echo $row['author'];?>'><?php echo $row['username'];?></a>
                                             </span>
                                             <span>
                                                 <i class="fa fa-calendar" aria-hidden="true"></i>
@@ -66,7 +66,7 @@
                             echo "<h2>No Record Found </h2>";
                         }
                        ?>  
-                        </div>
+                       
 
                         <?php
                         $sql1 = "SELECT * FROM post";
@@ -99,12 +99,6 @@
                         }
                         
                         ?>
-
-                        <!-- <ul class='pagination'>
-                            <li class="active"><a href="">1</a></li>
-                            <li><a href="">2</a></li>
-                            <li><a href="">3</a></li>
-                        </ul> -->
                     </div><!-- /post-container -->
                 </div>
                 <?php include 'sidebar.php'; ?>
