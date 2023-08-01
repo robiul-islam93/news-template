@@ -12,10 +12,12 @@
                           <label for="post_title">Title</label>
                           <input type="text" name="post_title" class="form-control" autocomplete="off" required>
                       </div>
+
                       <div class="form-group">
                           <label for="exampleInputPassword1"> Description</label>
                           <textarea name="postdesc" class="form-control" rows="5"  required></textarea>
                       </div>
+                      
                       <div class="form-group">
                           <label for="exampleInputPassword1">Category</label>
                           <select name="category" class="form-control">

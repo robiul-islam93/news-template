@@ -28,6 +28,8 @@ if($_SESSION ["user_role"]== '0'){
               /* select query with offset and limit */
               $sql = "SELECT * FROM  category ORDER BY category_id DESC Limit $offset,$limit";
               $result = mysqli_query($connection, $sql);
+             
+             
               if (mysqli_num_rows($result) > 0) {
                   $table = '<table class="content-table">';
                   $table .= '<thead>
