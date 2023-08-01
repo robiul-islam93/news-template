@@ -225,8 +225,7 @@ form{
 
 /* Main Content Styling */
 #main-content{
-    padding: 30px 0;
-    min-height: 750px;
+    min-height: 10px!important;
 }
 
 #main-content .post-container{
@@ -255,9 +254,7 @@ form{
 #main-content .post-content .post-img:hover{
   border: 3px solid #1e90ff;
 }
-#main-content .post-content .inner-content{
-    /* border: 1px solid #000; */
-}
+
 
 #main-content .post-content h3{
     font-size: 21px;
